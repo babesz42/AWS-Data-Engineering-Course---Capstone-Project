@@ -53,7 +53,8 @@ python3
 import pandas as pd
 df = pd.read_csv('SAU-HighSeas-71-v48-0.csv')
 df.to_parquet('SAU-HighSeas-71-v48-0.parquet')
-exit()```
+exit()
+```
 
 bash: `aws s3 cp SAU-HighSeas-71-v48-0.parquet s3://data-source-6769/`
 
