@@ -73,7 +73,9 @@ SELECT year, fishing_entity AS Country, CAST(CAST(SUM(landed_value) AS DOUBLE) A
 FROM fishdb.data_source_6769
 WHERE area_name LIKE '%Pacific%' and fishing_entity='Fiji' AND year > 2000
 GROUP BY year, fishing_entity
-ORDER By year``` --> also works
+ORDER By year
+```
+--> also works
 
 Next:
 
