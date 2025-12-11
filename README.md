@@ -84,4 +84,6 @@ SELECT year, fishing_entity AS Country, CAST(CAST(SUM(landed_value) AS DOUBLE) A
 FROM fishdb.data_source_6769
 WHERE area_name IS NULL and fishing_entity='Fiji' AND year > 2000
 GROUP BY year, fishing_entity
-ORDER By year``` --> created view from query with name `challange`
+ORDER By year
+```
+--> created view from query with name `challange`
