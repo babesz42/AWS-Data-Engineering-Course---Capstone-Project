@@ -87,3 +87,31 @@ GROUP BY year, fishing_entity
 ORDER By year
 ```
 --> created view from query with name `challange`
+
+## 2.3 Transforming a new file and adding it to the dataset 
+Adding the `SAU-EEZ-242-v48-0.csv` data file to the dataset in Amazon S3.
+
+### 2.3.1 Create backup
+`cp SAU-EEZ-242-v48-0.csv SAU-EEZ-242-v48-0-old.csv˛`
+`data_location = 'SAU-EEZ-242-v48-0-old.csv'`
+Change the names
+`df.rename(columns = {"fish_name": "common_name", "country": "fishing_entity"}, inplace = True)`
+
+Write changes to disk
+`df.to_csv('SAU-EEZ-242-v48-0.csv', header=True, index=False)`
+`df.to_parquet('SAU-EEZ-242-v48-0.parquet')`
+`exit()`
+
+### 2.3.2 Upload it
+`aws s3 cp SAU-EEZ-242-v48-0.parquet s3://data-source-6769/` --> yep its in the bucket
+
+### 2.3.3 Run Crawler again
+
+### 2.3.4 Run some queries in Athena
+I have ran the queries given in the lab on my `fishdb.data_source_6769` and they all worked
+
+### 2.3.5 Create a view in Athena
+Ran the code to create the view, checked the preview and it looks okay.
+
+# Project is finsihed, submitted
+
