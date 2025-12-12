@@ -113,5 +113,9 @@ I have ran the queries given in the lab on my `fishdb.data_source_6769` and they
 ### 2.3.5 Create a view in Athena
 Ran the code to create the view, checked the preview and it looks okay.
 
-# Project is finsihed, submitted
+# Project is finsihed, submitted - Review
+Interestingly this is my final result, altough I have done the steps too where it says 0.
 
+<img width="380" height="480" alt="image" src="https://github.com/user-attachments/assets/be612f17-9be6-4983-a3e5-e87651ba278f" />
+
+During the lab, I have started it, then did everything until the challange, then I only continued it the next day, and when I restarted the lab I already had my S3 bucket and everything ready just as I set it up the day before. Maybe that can be the problem, but anyways I have written down the major steps in this document.
